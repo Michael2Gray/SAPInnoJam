@@ -1,0 +1,113 @@
+body
+{
+	background: url(images/bgTest.png);
+	font-family: 'Lato', sans-serif;
+}
+
+h3
+{
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+.gmap3
+{
+    border: 1px dashed #C0C0C0;
+   	padding-top:25px;
+    width: 100%;
+    margin:auto;
+    height: 35em;
+}
+
+.mainRow
+{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.navbar-default
+{
+	background-color: #fff;
+}
+
+.navbar 
+{
+	height: auto;
+	padding: 5px;
+}
+
+.navbar-brand
+{
+	padding: 0px;
+}
+
+form
+{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+}
+
+label
+{
+	font-weight: 300;
+}
+
+.well
+{
+	background-color: #fff;
+	border-color: #fff;
+	border-radius: 8px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.col-md-8
+{
+	margin-top: 25px;
+}
+
+.col-md-6
+{
+	width: 45%;
+	padding-bottom: 15px;
+}
+
+.map
+{
+	background-color: #fff;
+	border-radius: 8px;
+}
+
+.mapRight
+{
+	margin-left: 10px;
+}
+
+.mapLeft
+{
+	margin-right: 10px;
+}
+
+.footer
+{
+	height: 20px;
+	padding: none;
+}
+
+@media(max-width: 991px){
+	.col-md-6
+	{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 15px;
+		margin-bottom: 70px;
+	}
+
+	.mapLeft
+	{
+		margin-bottom: 0px;
+	}
+}

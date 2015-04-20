@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/icon.png" type="image/png" sizes="16x16">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/gmap3.js"></script> 
+    <script type="text/javascript" src="js/makeMap2.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand"><img src="images/logo.png"></a>
+
+        <button class="navbar-toggle" data-toggle ="collapse" data-target =".navHeaderCollapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>  About</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-phone-alt"></span>  Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div class="row mainRow">
+
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4">
+              <form name="sentForm" class="well" id="busForm" method="post">
+
+                <!--Bus Number-->
+                <div class="control-group">
+                  <label class="control-label" for="busRoute"><span class="glyphicon glyphicon-road"></span>  Bus Route:</label>
+                  <div class="controls">
+                    <select class="form-control" id="busRoute">
+                      <option>0</option>
+                      <option>44</option>
+                    </select>
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+
+                <!--Departure Point-->
+                <div class="control-group">
+                  <label class="control-label" for="departure"><span class="glyphicon glyphicon-map-marker"></span>  Departure Point:</label>
+                  <div class="controls">
+                    <select class="form-control" id="departure">
+                    </select>
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+
+                <!--Arrival Point-->
+                <div class="control-group">
+                  <label class="control-label" for="arrival"><span class="glyphicon glyphicon-map-marker"></span>  Arrival Point:</label>
+                  <div class="controls">
+                    <select class="form-control" id="arrival">
+                    </select>
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+
+                <!--Arrival Time-->
+                <div class="control-group">
+                  <label class="control-label" for="arrivalTime"><span class="glyphicon glyphicon-time"></span>  Arrival Time:</label>
+                  <div class="controls">
+                    <input type="time" class="form-control" id="arrivalTime"/>
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+
+                <!--Warning Time-->
+                <div class="control-group">
+                  <label class="control-label" for="warningTime"><span class="glyphicon glyphicon-time"></span>  Warning Time (Min):</label>
+                  <div class="controls">
+                    <select class="form-control" id="arrivalTime">
+                      <option>5</option>
+                      <option>10</option>
+                      <option>15</option>
+                      <option>20</option>
+                      <option>25</option>
+                      <option>30</option>
+                    </select>
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+
+                <!--Mobile Number-->
+                <div class="control-group">
+                  <label class="control-label" for="mobile"><span class="glyphicon glyphicon-earphone"></span>  Mobile Number:</label>
+                  <div class="controls">
+                    <input type="tel" class="form-control" placeholder="Mobile Number" id="mobile"/>
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+
+                <div id="success"> </div> <!--For Successful/Failed Meesages-->
+                <br>
+                <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                <br>
+                <br>
+              </form>
+            </div>
+            <div class="col-md-8">
+              <div class="col-md-6 map mapLeft">
+                <h3>Departure Stop</h3>
+              <div id="map" class="gmap3"></div>
+            </div>
+            <div class="col-md-6 map mapRight">
+              <h3>Arrival Stop</h3>
+              <div id="map2" class="gmap3"></div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar navbar-default navbar-fixed-bottom footer">
+          <div class="container">
+            <p class="navbar-text">© Honeybadgers 2014</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/populateDropDowns.js"></script>
+  </body>
+</html>
